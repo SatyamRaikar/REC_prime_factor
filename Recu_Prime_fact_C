@@ -1,0 +1,32 @@
+/******************************************************************************
+
+                          RECURSIVE FUNCTION
+TO FIND PRIME FACTOR USING RECURSIVE FUNCTION 
+*******************************************************************************/
+
+#include <stdio.h>
+void prime_fac(int);
+int main()
+{
+    int n;
+    printf("please enter the number whose prime factor we have to find");
+    scanf("%d",&n);
+    prime_fac(n);
+}
+void prime_fac(int n)
+{
+    static int i=2;
+   if(i<=n)
+   {
+       if(n%i==0)
+    {
+        printf("%d",i);
+        n=n/i;
+    }
+    else
+    {
+        i++;
+    }
+    prime_fac(n);
+   }
+}
